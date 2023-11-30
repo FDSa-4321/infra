@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "demo-github-action-tf-hari"
-    key    = "/tfstate"
+    key    = "tfstate"
     region = "us-east-1"
   }
 }
