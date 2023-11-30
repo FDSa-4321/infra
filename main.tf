@@ -5,6 +5,11 @@ terraform {
       version = "4.12.1"
     }
   }
+  backend "s3" {
+    bucket = "demo-github-action-tf-hari"
+    key    = "/tfstate"
+    region = "us-east-1"
+  }
 }
 
 # Configure the AWS Provider
