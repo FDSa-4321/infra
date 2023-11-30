@@ -12,12 +12,9 @@ provider "aws" {
   region = "us-east-1" # define region as per your account
 }
 
-resource "aws_s3_bucket" "new_bucket" {
-  bucket = "demo-github-action-tf-hari"
-
-  object_lock_enabled = false
-
-  tags = {
-    Environment = "Prod"
-  }
+resource "aws_vpc" "main" {
+ cidr_block = "10.0.0.0/16"
+ tags = {
+   Name = "Project VPC"
+ }
 }
